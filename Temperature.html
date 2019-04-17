@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Temperature(celsius) {
+            this.celsius = celsius;
+
+            this.getCelsius = function () {
+                return this.celsius;
+            };
+            this.setCelsious = function (celsious) {
+                this.celsius = celsious;
+            };
+
+            this.getFahrenheit = function () {
+                return this.celsius*(9/5)+32;
+            };
+            this.getKevil = function () {
+                return this.celsius + 273.15;
+            }
+        }
+
+        let Tpr = new Temperature(25);
+        let celsius1 = Tpr.getCelsius();
+        let Fahrenheit = Tpr.getFahrenheit();
+        let Kevil = Tpr.getKevil();
+
+        console.log('Fahrenheit: '+Fahrenheit);
+        console.log('Kevil: ' +Kevil);
+    </script>
+</body>
+</html>
